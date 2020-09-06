@@ -111,14 +111,13 @@ async function listMajors(auth: any) {
     console.log(spreadsheet)
 
     // Update Summary Sheets
-    const summary = spreadsheet.data.sheets?.find(sheet => sheet.properties?.title === 'Summary')
     await sheets.spreadsheets.values.batchUpdate({
         spreadsheetId: spreadsheet.data.spreadsheetId,
         requestBody: {
             valueInputOption: "USER_ENTERED",
             data: [
                 {
-                    range: "A1:P9",
+                    range: "Summary!A1:P9",
                     values: [
                         [
                             "Clan Name",
@@ -139,6 +138,42 @@ async function listMajors(auth: any) {
                         })
                     ]
                 }
+            ],
+        },
+    })
+
+    // Initialize Each Clan Sheets
+    const opponentsCount = leaguegroup.clans.length - 1;
+    await sheets.spreadsheets.values.batchUpdate({
+        spreadsheetId: spreadsheet.data.spreadsheetId,
+        requestBody: {
+            valueInputOption: "USER_ENTERED",
+            data: [
+                ...leaguegroup.clans.map((c: any) => {
+                    return {
+                        range: `${c.name}!A1:L${c.members.length + 1}`,
+                        values: [
+                            [
+                                "Player Name",
+                                "Player Tag",
+                                "TH",
+                                "Stars",
+                                "Count",
+                                ...Array.from(Array(opponentsCount)).map((_, idx) => `R${idx + 1}`)
+                            ],
+                            ...c.members.map((m: any, idx: number) => {
+                                return [
+                                    m.name,
+                                    m.tag,
+                                    m.townHallLevel,
+                                    `=SUM(F${idx + 2}:L${idx + 2})`,
+                                    `=COUNTA(F${idx + 2}:L${idx + 2})`,
+                                    ...Array.from(Array(opponentsCount)).map((_, idx) => undefined)
+                                ]
+                            })
+                        ]
+                    }
+                })
             ],
         },
     })

@@ -1,0 +1,1098 @@
+{
+  "state": "inWar",
+  "teamSize": 30,
+  "preparationStartTime": "20200904T143928.000Z",
+  "startTime": "20200905T143917.000Z",
+  "endTime": "20200906T143917.000Z",
+  "clan": {
+    "tag": "#29UQ0802V",
+    "name": "終わりなき旅",
+    "badgeUrls": {
+      "small": "https://api-assets.clashofclans.com/badges/70/ziaBRYqiBCg42JhgYYcpXQ5Q875_-oJa2sqgl1pTiek.png",
+      "large": "https://api-assets.clashofclans.com/badges/512/ziaBRYqiBCg42JhgYYcpXQ5Q875_-oJa2sqgl1pTiek.png",
+      "medium": "https://api-assets.clashofclans.com/badges/200/ziaBRYqiBCg42JhgYYcpXQ5Q875_-oJa2sqgl1pTiek.png"
+    },
+    "clanLevel": 12,
+    "attacks": 25,
+    "stars": 56,
+    "destructionPercentage": 73.33333333333333,
+    "members": [
+      {
+        "tag": "#UC29C2RQ",
+        "name": "クフレ",
+        "townhallLevel": 13,
+        "mapPosition": 9,
+        "attacks": [
+          {
+            "attackerTag": "#UC29C2RQ",
+            "defenderTag": "#Y9CYQ99RY",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 11
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#PYQVGRPUQ",
+          "defenderTag": "#UC29C2RQ",
+          "stars": 2,
+          "destructionPercentage": 89,
+          "order": 22
+        }
+      },
+      {
+        "tag": "#PGRG0UGG",
+        "name": "takezoh",
+        "townhallLevel": 13,
+        "mapPosition": 1,
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#8LCRYUUPC",
+          "defenderTag": "#PGRG0UGG",
+          "stars": 1,
+          "destructionPercentage": 55,
+          "order": 17
+        }
+      },
+      {
+        "tag": "#YUJ99YC8",
+        "name": "シカマル",
+        "townhallLevel": 13,
+        "mapPosition": 21,
+        "attacks": [
+          {
+            "attackerTag": "#YUJ99YC8",
+            "defenderTag": "#YJPVCCLCY",
+            "stars": 2,
+            "destructionPercentage": 83,
+            "order": 9
+          }
+        ],
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#G2RCVLY9",
+        "name": "らいと",
+        "townhallLevel": 13,
+        "mapPosition": 2,
+        "attacks": [
+          {
+            "attackerTag": "#G2RCVLY9",
+            "defenderTag": "#UQYRVLY",
+            "stars": 2,
+            "destructionPercentage": 85,
+            "order": 36
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#PPUC2G0UR",
+          "defenderTag": "#G2RCVLY9",
+          "stars": 2,
+          "destructionPercentage": 74,
+          "order": 3
+        }
+      },
+      {
+        "tag": "#2J8P98LL",
+        "name": "(!)たかちん(!)",
+        "townhallLevel": 13,
+        "mapPosition": 17,
+        "attacks": [
+          {
+            "attackerTag": "#2J8P98LL",
+            "defenderTag": "#PYQVGRPUQ",
+            "stars": 2,
+            "destructionPercentage": 71,
+            "order": 16
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#PU2JJPCL2",
+          "defenderTag": "#2J8P98LL",
+          "stars": 2,
+          "destructionPercentage": 59,
+          "order": 12
+        }
+      },
+      {
+        "tag": "#JJ8QL0V",
+        "name": "MIKASA",
+        "townhallLevel": 13,
+        "mapPosition": 3,
+        "attacks": [
+          {
+            "attackerTag": "#JJ8QL0V",
+            "defenderTag": "#88GPGJJQQ",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 28
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#88GPGJJQQ",
+          "defenderTag": "#JJ8QL0V",
+          "stars": 2,
+          "destructionPercentage": 61,
+          "order": 37
+        }
+      },
+      {
+        "tag": "#2G0CG9UJR",
+        "name": "BOSS",
+        "townhallLevel": 12,
+        "mapPosition": 43,
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#RL0VGVJ2",
+          "defenderTag": "#2G0CG9UJR",
+          "stars": 2,
+          "destructionPercentage": 99,
+          "order": 18
+        }
+      },
+      {
+        "tag": "#8V08UVVVC",
+        "name": "ran",
+        "townhallLevel": 13,
+        "mapPosition": 20,
+        "attacks": [
+          {
+            "attackerTag": "#8V08UVVVC",
+            "defenderTag": "#RJQGLQ9",
+            "stars": 2,
+            "destructionPercentage": 81,
+            "order": 15
+          }
+        ],
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#2JUP20Q8U",
+        "name": "一番搾り",
+        "townhallLevel": 13,
+        "mapPosition": 15,
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#L00PQQU80",
+          "defenderTag": "#2JUP20Q8U",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 32
+        }
+      },
+      {
+        "tag": "#PV8QV9Y8U",
+        "name": "えいたまん",
+        "townhallLevel": 13,
+        "mapPosition": 33,
+        "attacks": [
+          {
+            "attackerTag": "#PV8QV9Y8U",
+            "defenderTag": "#Y2JGVQCQ",
+            "stars": 2,
+            "destructionPercentage": 81,
+            "order": 21
+          }
+        ],
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#J8VJY00Y",
+        "name": "ディグマル",
+        "townhallLevel": 13,
+        "mapPosition": 10,
+        "attacks": [
+          {
+            "attackerTag": "#J8VJY00Y",
+            "defenderTag": "#8YG89Q0CJ",
+            "stars": 2,
+            "destructionPercentage": 84,
+            "order": 10
+          }
+        ],
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#YRR99P82",
+        "name": "ぽん♡ぽん",
+        "townhallLevel": 13,
+        "mapPosition": 4,
+        "attacks": [
+          {
+            "attackerTag": "#YRR99P82",
+            "defenderTag": "#PPUC2G0UR",
+            "stars": 2,
+            "destructionPercentage": 99,
+            "order": 30
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#UQYRVLY",
+          "defenderTag": "#YRR99P82",
+          "stars": 2,
+          "destructionPercentage": 73,
+          "order": 26
+        }
+      },
+      {
+        "tag": "#RCYRJ202",
+        "name": "ヴェステイル",
+        "townhallLevel": 13,
+        "mapPosition": 23,
+        "attacks": [
+          {
+            "attackerTag": "#RCYRJ202",
+            "defenderTag": "#2QV2JJY20",
+            "stars": 1,
+            "destructionPercentage": 91,
+            "order": 39
+          }
+        ],
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#GUQ8L820",
+        "name": "シャーク帝国",
+        "townhallLevel": 13,
+        "mapPosition": 5,
+        "attacks": [
+          {
+            "attackerTag": "#GUQ8L820",
+            "defenderTag": "#Y0PJ80RRY",
+            "stars": 2,
+            "destructionPercentage": 61,
+            "order": 25
+          }
+        ],
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#2JYPCRU2P",
+        "name": "れいな♡秘書",
+        "townhallLevel": 13,
+        "mapPosition": 27,
+        "attacks": [
+          {
+            "attackerTag": "#2JYPCRU2P",
+            "defenderTag": "#2VYVJYPC0",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 2
+          }
+        ],
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#L2P8YL80",
+        "name": "すばるん",
+        "townhallLevel": 13,
+        "mapPosition": 34,
+        "attacks": [
+          {
+            "attackerTag": "#L2P8YL80",
+            "defenderTag": "#89088URLQ",
+            "stars": 2,
+            "destructionPercentage": 86,
+            "order": 40
+          }
+        ],
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#VPL290J",
+        "name": "たつき",
+        "townhallLevel": 13,
+        "mapPosition": 7,
+        "attacks": [
+          {
+            "attackerTag": "#VPL290J",
+            "defenderTag": "#89ULP9CUJ",
+            "stars": 2,
+            "destructionPercentage": 91,
+            "order": 7
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#YC29PCR2",
+          "defenderTag": "#VPL290J",
+          "stars": 2,
+          "destructionPercentage": 56,
+          "order": 31
+        }
+      },
+      {
+        "tag": "#2G0U9209",
+        "name": "COMACOTA",
+        "townhallLevel": 13,
+        "mapPosition": 6,
+        "attacks": [
+          {
+            "attackerTag": "#2G0U9209",
+            "defenderTag": "#8QQJV98VQ",
+            "stars": 2,
+            "destructionPercentage": 90,
+            "order": 13
+          }
+        ],
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#2R2UJR22Q",
+        "name": "しんのすけ",
+        "townhallLevel": 13,
+        "mapPosition": 13,
+        "attacks": [
+          {
+            "attackerTag": "#2R2UJR22Q",
+            "defenderTag": "#L00PQQU80",
+            "stars": 2,
+            "destructionPercentage": 65,
+            "order": 14
+          }
+        ],
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#Y2JPGP0LY",
+        "name": "✪孔明✪history",
+        "townhallLevel": 13,
+        "mapPosition": 28,
+        "attacks": [
+          {
+            "attackerTag": "#Y2JPGP0LY",
+            "defenderTag": "#9RPJLJQ0R",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 35
+          }
+        ],
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#LVGUUVCU",
+        "name": "ギニュー隊長",
+        "townhallLevel": 13,
+        "mapPosition": 32,
+        "attacks": [
+          {
+            "attackerTag": "#LVGUUVCU",
+            "defenderTag": "#898JYGQ0P",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 1
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#2VYVJYPC0",
+          "defenderTag": "#LVGUUVCU",
+          "stars": 1,
+          "destructionPercentage": 66,
+          "order": 5
+        }
+      },
+      {
+        "tag": "#QGR89PRP",
+        "name": "たまちゃん",
+        "townhallLevel": 13,
+        "mapPosition": 26,
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#YVJPYPGQL",
+          "defenderTag": "#QGR89PRP",
+          "stars": 2,
+          "destructionPercentage": 79,
+          "order": 23
+        }
+      },
+      {
+        "tag": "#R28UGLCG",
+        "name": "takkyuuplayer",
+        "townhallLevel": 12,
+        "mapPosition": 46,
+        "attacks": [
+          {
+            "attackerTag": "#R28UGLCG",
+            "defenderTag": "#PLYJPC8JC",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 19
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#PLYJPC8JC",
+          "defenderTag": "#R28UGLCG",
+          "stars": 2,
+          "destructionPercentage": 58,
+          "order": 24
+        }
+      },
+      {
+        "tag": "#29VJYYGUV",
+        "name": "暁のイタチ",
+        "townhallLevel": 13,
+        "mapPosition": 18,
+        "attacks": [
+          {
+            "attackerTag": "#29VJYYGUV",
+            "defenderTag": "#PU2JJPCL2",
+            "stars": 1,
+            "destructionPercentage": 78,
+            "order": 27
+          }
+        ],
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#PVPLCCR0P",
+        "name": "F capデカリーノ",
+        "townhallLevel": 12,
+        "mapPosition": 47,
+        "attacks": [
+          {
+            "attackerTag": "#PVPLCCR0P",
+            "defenderTag": "#20092U29P",
+            "stars": 2,
+            "destructionPercentage": 86,
+            "order": 29
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#20092U29P",
+          "defenderTag": "#PVPLCCR0P",
+          "stars": 2,
+          "destructionPercentage": 76,
+          "order": 20
+        }
+      },
+      {
+        "tag": "#90JVU8VPJ",
+        "name": "さる",
+        "townhallLevel": 13,
+        "mapPosition": 22,
+        "attacks": [
+          {
+            "attackerTag": "#90JVU8VPJ",
+            "defenderTag": "#PJLJU292V",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 4
+          }
+        ],
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#9GPJ29RQC",
+        "name": "ボーズ",
+        "townhallLevel": 13,
+        "mapPosition": 16,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8PGYC8UCP",
+        "name": "サマナー",
+        "townhallLevel": 13,
+        "mapPosition": 25,
+        "attacks": [
+          {
+            "attackerTag": "#8PGYC8UCP",
+            "defenderTag": "#C0JYUJL9",
+            "stars": 2,
+            "destructionPercentage": 80,
+            "order": 8
+          }
+        ],
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8Q8ULYLPG",
+        "name": "とびー",
+        "townhallLevel": 13,
+        "mapPosition": 37,
+        "attacks": [
+          {
+            "attackerTag": "#8Q8ULYLPG",
+            "defenderTag": "#8LCRYUUPC",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 34
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#8UR0UGG8U",
+          "defenderTag": "#8Q8ULYLPG",
+          "stars": 2,
+          "destructionPercentage": 91,
+          "order": 38
+        }
+      },
+      {
+        "tag": "#8L8LV22PV",
+        "name": "himi",
+        "townhallLevel": 13,
+        "mapPosition": 35,
+        "attacks": [
+          {
+            "attackerTag": "#8L8LV22PV",
+            "defenderTag": "#YC29PCR2",
+            "stars": 2,
+            "destructionPercentage": 88,
+            "order": 6
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#Y2JGVQCQ",
+          "defenderTag": "#8L8LV22PV",
+          "stars": 1,
+          "destructionPercentage": 49,
+          "order": 33
+        }
+      }
+    ]
+  },
+  "opponent": {
+    "tag": "#8UYCVJ9G",
+    "name": "囧大鵬—",
+    "badgeUrls": {
+      "small": "https://api-assets.clashofclans.com/badges/70/ISyB5wAm2v7B_rm-LJS360ga-83IFL8MABcjxft1RkA.png",
+      "large": "https://api-assets.clashofclans.com/badges/512/ISyB5wAm2v7B_rm-LJS360ga-83IFL8MABcjxft1RkA.png",
+      "medium": "https://api-assets.clashofclans.com/badges/200/ISyB5wAm2v7B_rm-LJS360ga-83IFL8MABcjxft1RkA.png"
+    },
+    "clanLevel": 18,
+    "attacks": 15,
+    "stars": 28,
+    "destructionPercentage": 36.166666666666664,
+    "members": [
+      {
+        "tag": "#2VYVJYPC0",
+        "name": "龙爷的南海无敌舰队",
+        "townhallLevel": 13,
+        "mapPosition": 23,
+        "attacks": [
+          {
+            "attackerTag": "#2VYVJYPC0",
+            "defenderTag": "#LVGUUVCU",
+            "stars": 1,
+            "destructionPercentage": 66,
+            "order": 5
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#2JYPCRU2P",
+          "defenderTag": "#2VYVJYPC0",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 2
+        }
+      },
+      {
+        "tag": "#8LCRYUUPC",
+        "name": "成精的你",
+        "townhallLevel": 12,
+        "mapPosition": 29,
+        "attacks": [
+          {
+            "attackerTag": "#8LCRYUUPC",
+            "defenderTag": "#PGRG0UGG",
+            "stars": 1,
+            "destructionPercentage": 55,
+            "order": 17
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#8Q8ULYLPG",
+          "defenderTag": "#8LCRYUUPC",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 34
+        }
+      },
+      {
+        "tag": "#Y9CYQ99RY",
+        "name": "happy丿疯子",
+        "townhallLevel": 13,
+        "mapPosition": 12,
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#UC29C2RQ",
+          "defenderTag": "#Y9CYQ99RY",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 11
+        }
+      },
+      {
+        "tag": "#8UR0UGG8U",
+        "name": "幸福",
+        "townhallLevel": 13,
+        "mapPosition": 1,
+        "attacks": [
+          {
+            "attackerTag": "#8UR0UGG8U",
+            "defenderTag": "#8Q8ULYLPG",
+            "stars": 2,
+            "destructionPercentage": 91,
+            "order": 38
+          }
+        ],
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#RL0VGVJ2",
+        "name": "༺༈༼Mr.陈哥哥༽༈༻",
+        "townhallLevel": 12,
+        "mapPosition": 30,
+        "attacks": [
+          {
+            "attackerTag": "#RL0VGVJ2",
+            "defenderTag": "#2G0CG9UJR",
+            "stars": 2,
+            "destructionPercentage": 99,
+            "order": 18
+          }
+        ],
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#YC29PCR2",
+        "name": "雾城孤儿",
+        "townhallLevel": 13,
+        "mapPosition": 7,
+        "attacks": [
+          {
+            "attackerTag": "#YC29PCR2",
+            "defenderTag": "#VPL290J",
+            "stars": 2,
+            "destructionPercentage": 56,
+            "order": 31
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#8L8LV22PV",
+          "defenderTag": "#YC29PCR2",
+          "stars": 2,
+          "destructionPercentage": 88,
+          "order": 6
+        }
+      },
+      {
+        "tag": "#8YG89Q0CJ",
+        "name": "kawaiinya",
+        "townhallLevel": 13,
+        "mapPosition": 19,
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#J8VJY00Y",
+          "defenderTag": "#8YG89Q0CJ",
+          "stars": 2,
+          "destructionPercentage": 84,
+          "order": 10
+        }
+      },
+      {
+        "tag": "#PJLJU292V",
+        "name": "疯狂的海利子",
+        "townhallLevel": 13,
+        "mapPosition": 17,
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#90JVU8VPJ",
+          "defenderTag": "#PJLJU292V",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 4
+        }
+      },
+      {
+        "tag": "#PPUC2G0UR",
+        "name": "小思绪",
+        "townhallLevel": 13,
+        "mapPosition": 2,
+        "attacks": [
+          {
+            "attackerTag": "#PPUC2G0UR",
+            "defenderTag": "#G2RCVLY9",
+            "stars": 2,
+            "destructionPercentage": 74,
+            "order": 3
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#YRR99P82",
+          "defenderTag": "#PPUC2G0UR",
+          "stars": 2,
+          "destructionPercentage": 99,
+          "order": 30
+        }
+      },
+      {
+        "tag": "#RJQGLQ9",
+        "name": "ಠ_ಠ 一朵耙耙",
+        "townhallLevel": 13,
+        "mapPosition": 15,
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#8V08UVVVC",
+          "defenderTag": "#RJQGLQ9",
+          "stars": 2,
+          "destructionPercentage": 81,
+          "order": 15
+        }
+      },
+      {
+        "tag": "#C0JYUJL9",
+        "name": "嫩芽芽大魔王",
+        "townhallLevel": 13,
+        "mapPosition": 9,
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#8PGYC8UCP",
+          "defenderTag": "#C0JYUJL9",
+          "stars": 2,
+          "destructionPercentage": 80,
+          "order": 8
+        }
+      },
+      {
+        "tag": "#YJPVCCLCY",
+        "name": "土匪窝",
+        "townhallLevel": 13,
+        "mapPosition": 16,
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#YUJ99YC8",
+          "defenderTag": "#YJPVCCLCY",
+          "stars": 2,
+          "destructionPercentage": 83,
+          "order": 9
+        }
+      },
+      {
+        "tag": "#898JYGQ0P",
+        "name": "對她°Resign↗",
+        "townhallLevel": 13,
+        "mapPosition": 21,
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#LVGUUVCU",
+          "defenderTag": "#898JYGQ0P",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 1
+        }
+      },
+      {
+        "tag": "#UQYRVLY",
+        "name": "Asgard$$$",
+        "townhallLevel": 13,
+        "mapPosition": 4,
+        "attacks": [
+          {
+            "attackerTag": "#UQYRVLY",
+            "defenderTag": "#YRR99P82",
+            "stars": 2,
+            "destructionPercentage": 73,
+            "order": 26
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#G2RCVLY9",
+          "defenderTag": "#UQYRVLY",
+          "stars": 2,
+          "destructionPercentage": 85,
+          "order": 36
+        }
+      },
+      {
+        "tag": "#9RPJLJQ0R",
+        "name": "cute仔之屋",
+        "townhallLevel": 13,
+        "mapPosition": 24,
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#Y2JPGP0LY",
+          "defenderTag": "#9RPJLJQ0R",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 35
+        }
+      },
+      {
+        "tag": "#800GG9GQU",
+        "name": "縱使相逢應不識",
+        "townhallLevel": 13,
+        "mapPosition": 22,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#YVJPYPGQL",
+        "name": "嘿嘿",
+        "townhallLevel": 13,
+        "mapPosition": 20,
+        "attacks": [
+          {
+            "attackerTag": "#YVJPYPGQL",
+            "defenderTag": "#QGR89PRP",
+            "stars": 2,
+            "destructionPercentage": 79,
+            "order": 23
+          }
+        ],
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8QQJV98VQ",
+        "name": "夏有乔木9s7x",
+        "townhallLevel": 13,
+        "mapPosition": 6,
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#2G0U9209",
+          "defenderTag": "#8QQJV98VQ",
+          "stars": 2,
+          "destructionPercentage": 90,
+          "order": 13
+        }
+      },
+      {
+        "tag": "#89088URLQ",
+        "name": "野猪庄园",
+        "townhallLevel": 13,
+        "mapPosition": 25,
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#L2P8YL80",
+          "defenderTag": "#89088URLQ",
+          "stars": 2,
+          "destructionPercentage": 86,
+          "order": 40
+        }
+      },
+      {
+        "tag": "#282Q9UQUV",
+        "name": "合作社",
+        "townhallLevel": 13,
+        "mapPosition": 14,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#88GPGJJQQ",
+        "name": "小恶魔",
+        "townhallLevel": 13,
+        "mapPosition": 3,
+        "attacks": [
+          {
+            "attackerTag": "#88GPGJJQQ",
+            "defenderTag": "#JJ8QL0V",
+            "stars": 2,
+            "destructionPercentage": 61,
+            "order": 37
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#JJ8QL0V",
+          "defenderTag": "#88GPGJJQQ",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 28
+        }
+      },
+      {
+        "tag": "#PU2JJPCL2",
+        "name": "绿色的海",
+        "townhallLevel": 13,
+        "mapPosition": 13,
+        "attacks": [
+          {
+            "attackerTag": "#PU2JJPCL2",
+            "defenderTag": "#2J8P98LL",
+            "stars": 2,
+            "destructionPercentage": 59,
+            "order": 12
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#29VJYYGUV",
+          "defenderTag": "#PU2JJPCL2",
+          "stars": 1,
+          "destructionPercentage": 78,
+          "order": 27
+        }
+      },
+      {
+        "tag": "#20092U29P",
+        "name": "小萌萌",
+        "townhallLevel": 12,
+        "mapPosition": 34,
+        "attacks": [
+          {
+            "attackerTag": "#20092U29P",
+            "defenderTag": "#PVPLCCR0P",
+            "stars": 2,
+            "destructionPercentage": 76,
+            "order": 20
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#PVPLCCR0P",
+          "defenderTag": "#20092U29P",
+          "stars": 2,
+          "destructionPercentage": 86,
+          "order": 29
+        }
+      },
+      {
+        "tag": "#L00PQQU80",
+        "name": "岭南悍匪",
+        "townhallLevel": 13,
+        "mapPosition": 11,
+        "attacks": [
+          {
+            "attackerTag": "#L00PQQU80",
+            "defenderTag": "#2JUP20Q8U",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 32
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#2R2UJR22Q",
+          "defenderTag": "#L00PQQU80",
+          "stars": 2,
+          "destructionPercentage": 65,
+          "order": 14
+        }
+      },
+      {
+        "tag": "#89ULP9CUJ",
+        "name": "不改名村庄",
+        "townhallLevel": 13,
+        "mapPosition": 10,
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#VPL290J",
+          "defenderTag": "#89ULP9CUJ",
+          "stars": 2,
+          "destructionPercentage": 91,
+          "order": 7
+        }
+      },
+      {
+        "tag": "#PLYJPC8JC",
+        "name": "湖北",
+        "townhallLevel": 12,
+        "mapPosition": 31,
+        "attacks": [
+          {
+            "attackerTag": "#PLYJPC8JC",
+            "defenderTag": "#R28UGLCG",
+            "stars": 2,
+            "destructionPercentage": 58,
+            "order": 24
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#R28UGLCG",
+          "defenderTag": "#PLYJPC8JC",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 19
+        }
+      },
+      {
+        "tag": "#Y0PJ80RRY",
+        "name": "王虎蛋",
+        "townhallLevel": 13,
+        "mapPosition": 5,
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#GUQ8L820",
+          "defenderTag": "#Y0PJ80RRY",
+          "stars": 2,
+          "destructionPercentage": 61,
+          "order": 25
+        }
+      },
+      {
+        "tag": "#2QV2JJY20",
+        "name": "华夏",
+        "townhallLevel": 13,
+        "mapPosition": 18,
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#RCYRJ202",
+          "defenderTag": "#2QV2JJY20",
+          "stars": 1,
+          "destructionPercentage": 91,
+          "order": 39
+        }
+      },
+      {
+        "tag": "#Y2JGVQCQ",
+        "name": "高配司机",
+        "townhallLevel": 12,
+        "mapPosition": 28,
+        "attacks": [
+          {
+            "attackerTag": "#Y2JGVQCQ",
+            "defenderTag": "#8L8LV22PV",
+            "stars": 1,
+            "destructionPercentage": 49,
+            "order": 33
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#PV8QV9Y8U",
+          "defenderTag": "#Y2JGVQCQ",
+          "stars": 2,
+          "destructionPercentage": 81,
+          "order": 21
+        }
+      },
+      {
+        "tag": "#PYQVGRPUQ",
+        "name": "无二无别",
+        "townhallLevel": 13,
+        "mapPosition": 8,
+        "attacks": [
+          {
+            "attackerTag": "#PYQVGRPUQ",
+            "defenderTag": "#UC29C2RQ",
+            "stars": 2,
+            "destructionPercentage": 89,
+            "order": 22
+          }
+        ],
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#2J8P98LL",
+          "defenderTag": "#PYQVGRPUQ",
+          "stars": 2,
+          "destructionPercentage": 71,
+          "order": 16
+        }
+      }
+    ]
+  },
+  "warStartTime": "20200905T143917.000Z"
+}

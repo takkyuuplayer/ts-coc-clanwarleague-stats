@@ -1,13 +1,20 @@
 import fs from 'fs'
+import util from 'util'
 import readline from 'readline'
-import { google } from 'googleapis'
+import { google, sheets_v4 } from 'googleapis'
+
+import { Coc } from './webServices/coc'
+import { receiveMessageOnPort } from 'worker_threads';
+import { content } from 'googleapis/build/src/apis/content'
 
 // If modifying these scopes, delete token.json.
-const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
+const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
 // The file token.json stores the user's access and refresh tokens, and is
 // created automatically when the authorization flow completes for the first
 // time.
 const TOKEN_PATH = 'token.json';
+
+const MAX_TH_LEVEL = 13;
 
 // Load client secrets from a local file.
 fs.readFile('credentials.json', (err, content) => {
@@ -71,22 +78,91 @@ function getNewToken(oAuth2Client: any, callback: typeof listMajors) {
  * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
  */
-function listMajors(auth: any) {
+async function listMajors(auth: any) {
+    // const client = await util.promisify(fs.readFile)('coc.json')
+    //     .then(content => new Coc(JSON.parse(content.toString()).jwt))
+    const clanTag = '#29UQ0802V'
+    // const leaguegroup = await client.fetchCurrentWarLeague(clanTag)
+    //     .then(response => response.data)
+    //     .catch(console.log);
+    const leaguegroup = await util.promisify(fs.readFile)('test/data/coc-currenwar-leaguegroup.json')
+        .then(content => JSON.parse(content.toString()))
+    const clan = leaguegroup.clans.find((c: any) => c.tag === clanTag)
+
     const sheets = google.sheets({ version: 'v4', auth });
-    sheets.spreadsheets.values.get({
-        spreadsheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
-        range: 'Class Data!A2:E',
-    }, (err, res) => {
-        if (err) return console.log('The API returned an error: ' + err);
-        const rows = res!.data.values;
-        if (rows!.length) {
-            console.log('Name, Major:');
-            // Print columns A and E, which correspond to indices 0 and 4.
-            rows!.map((row) => {
-                console.log(`${row[0]}, ${row[4]}`);
-            });
-        } else {
-            console.log('No data found.');
-        }
-    });
+    // const spreadsheet = await sheets.spreadsheets.create({
+    //     requestBody: {
+    //         properties: {
+    //             title: `${clan.name} (${clan.tag}) / ${leaguegroup.season}`,
+    //         },
+    //         sheets: [
+    //             {
+    //                 properties: {
+    //                     title: "Summary",
+    //                 },
+    //             },
+    //             ...leaguegroup.clans.map((c: any) => ({ properties: { title: c.name } }))
+    //         ]
+    //     }
+    // })
+    const spreadsheet = await sheets.spreadsheets.get({
+        spreadsheetId: '1Ah-LAZLH-IS1Xazs2wYhgLxTGW94Olu7Loq53gU9ACU'
+    })
+    console.log(spreadsheet)
+
+    // Update Summary Sheets
+    const summary = spreadsheet.data.sheets?.find(sheet => sheet.properties?.title === 'Summary')
+    await sheets.spreadsheets.values.batchUpdate({
+        spreadsheetId: spreadsheet.data.spreadsheetId,
+        requestBody: {
+            valueInputOption: "USER_ENTERED",
+            data: [
+                {
+                    range: "A1:P9",
+                    values: [
+                        [
+                            "Clan Name",
+                            "Clan Tag",
+                            "Members",
+                            ...Array.from(Array(MAX_TH_LEVEL)).map((_, idx) => `TH${MAX_TH_LEVEL - idx}`)
+                        ],
+                        ...leaguegroup.clans.map((c: any) => {
+                            return [
+                                c.name,
+                                c.tag,
+                                c.members.length,
+                                ...Array.from(Array(MAX_TH_LEVEL)).map((_, idx) => {
+                                    const len = c.members.filter((m: any) => m.townHallLevel == (MAX_TH_LEVEL - idx)).length
+                                    return len === 0 ? undefined : len;
+                                })
+                            ]
+                        })
+                    ]
+                }
+            ],
+        },
+    })
+
+
+    // Add Each Clan Sheets
+    // const addSheetRequests: Array<sheets_v4.Schema$Request> = leaguegroup.clans.filter((c: any) => {
+    //     return spreadsheet.data.sheets?.find(sheet => sheet.properties?.title === c.name) === undefined
+    // }).map((c: any) => {
+    //     return {
+    //         addSheet: {
+    //             properties: {
+    //                 title: `${c.name}`
+    //             }
+    //         }
+    //     }
+    // })
+    // if (addSheetRequests.length) {
+    //     const addedSheets = await sheets.spreadsheets.batchUpdate({
+    //         spreadsheetId: spreadsheet.data.spreadsheetId,
+    //         requestBody: {
+    //             requests: addSheetRequests
+    //         }
+    //     })
+    //     console.log(addedSheets)
+    // }
 }

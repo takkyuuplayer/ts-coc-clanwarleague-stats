@@ -264,6 +264,19 @@ async function listMajors(auth: any) {
                             fields: 'gridProperties.frozenColumnCount'
                         }
                     })),
+                ...spreadsheet.data.sheets!
+                    .filter(sheet => sheet.properties?.title === 'Summary')
+                    .map((sheet) => ({
+                        updateSheetProperties: {
+                            properties: {
+                                sheetId: sheet.properties!.sheetId,
+                                gridProperties: {
+                                    frozenColumnCount: 3,
+                                },
+                            },
+                            fields: 'gridProperties.frozenColumnCount'
+                        }
+                    })),
             ]
         }
     })

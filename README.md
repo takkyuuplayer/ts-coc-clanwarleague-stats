@@ -25,9 +25,9 @@ This generates the stats for Clan War Leagues on Google spreadsheet.
          $ curl 'https://api.ipify.org'
          1.2.3.4
          ```
-         ![CoC API token](./docs/coc.png | width=200)
+         ![CoC API token](./docs/coc.png)
     2. Save the generated token as `coc.jwt`
-         ![CoC API token](./docs/coc2.png | width=200)
+         ![CoC API token](./docs/coc2.png)
 1. Create `token.json`
    1. Run
       ```

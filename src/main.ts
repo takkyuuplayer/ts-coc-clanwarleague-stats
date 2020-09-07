@@ -6,6 +6,7 @@ import { google, sheets_v4 } from 'googleapis'
 import { Coc } from './webServices/coc'
 import { receiveMessageOnPort } from 'worker_threads';
 import { content } from 'googleapis/build/src/apis/content'
+import { fork } from 'cluster'
 
 // If modifying these scopes, delete token.json.
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
@@ -79,8 +80,8 @@ function getNewToken(oAuth2Client: any, callback: typeof listMajors) {
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
  */
 async function listMajors(auth: any) {
-    // const client = await util.promisify(fs.readFile)('coc.json')
-    //     .then(content => new Coc(JSON.parse(content.toString()).jwt))
+    const client = await util.promisify(fs.readFile)('coc.json')
+        .then(content => new Coc(JSON.parse(content.toString()).jwt))
     const clanTag = '#29UQ0802V'
     // const leaguegroup = await client.fetchCurrentWarLeague(clanTag)
     //     .then(response => response.data)
@@ -108,7 +109,7 @@ async function listMajors(auth: any) {
     const spreadsheet = await sheets.spreadsheets.get({
         spreadsheetId: '1Ah-LAZLH-IS1Xazs2wYhgLxTGW94Olu7Loq53gU9ACU'
     })
-    console.log(spreadsheet)
+    // console.log(spreadsheet)
 
     // Update Summary Sheets
     await sheets.spreadsheets.values.batchUpdate({
@@ -178,6 +179,51 @@ async function listMajors(auth: any) {
         },
     })
 
+    const members = leaguegroup.clans.reduce((prev: { [playerTag: string]: number }, c: any) => {
+        c.members.forEach((m: any, idx: number) => {
+            prev[m.tag] = idx + 2
+        })
+        return prev
+    }, {})
+    // console.log(members)
+
+    let eachWarResultRequests: Array<sheets_v4.Schema$ValueRange> = []
+    for (let idx = 0; idx < leaguegroup.rounds.length; idx++) {
+        const round = leaguegroup.rounds[idx]
+        if (round.warTags[0] === '#0') {
+            break;
+        }
+
+        const warResults = await Promise.all(round.warTags.map((warTag: string) => {
+            return client.fetchWar(warTag).then(response => response.data);
+        }))
+        const column = String.fromCharCode('F'.charCodeAt(0) + idx)
+        warResults.forEach((warResult: any) => {
+            eachWarResultRequests.push(...warResult.clan.members.map((m: any) => {
+                const cell = `${column}${members[m.tag]}`
+                const range = `${warResult.clan.name}!${cell}:${cell}`
+                return {
+                    range,
+                    values: [[m.attacks ? m.attacks[0].stars : "?"]]
+                }
+            }))
+            eachWarResultRequests.push(...warResult.opponent.members.map((m: any) => {
+                const cell = `${column}${members[m.tag]}`
+                const range = `${warResult.opponent.name}!${cell}:${cell}`
+                return {
+                    range,
+                    values: [[m.attacks ? m.attacks[0].stars : "?"]]
+                }
+            }))
+        })
+    }
+    await sheets.spreadsheets.values.batchUpdate({
+        spreadsheetId: spreadsheet.data.spreadsheetId,
+        requestBody: {
+            valueInputOption: "USER_ENTERED",
+            data: eachWarResultRequests,
+        }
+    })
 
     // Add Each Clan Sheets
     // const addSheetRequests: Array<sheets_v4.Schema$Request> = leaguegroup.clans.filter((c: any) => {

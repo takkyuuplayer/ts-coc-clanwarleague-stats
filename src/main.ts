@@ -86,9 +86,11 @@ async function listMajors(auth: any) {
     const spreadsheet = await generateSpreadsheet(auth, process.argv[2]);
     console.log(spreadsheet.data.spreadsheetUrl);
   } else {
-    console.log("You're ready to use");
-    console.log("Usage:");
-    console.log('    npx ts-node src/main.ts "#ClanTag"');
+    console.log(`========================================
+Conglaturation! You're ready to use.
+Usage:
+    npx ts-node src/main.ts "#ClanTag"
+========================================`);
   }
 }
 

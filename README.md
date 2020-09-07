@@ -16,7 +16,7 @@ This generates the stats for Clan War Leagues on Google spreadsheet.
    $ npm install
    ```
 1. Create `credentials.json`
-   1. [Turn on the Google Sheets API by following this Step 1](https://developers.google.com/sheets/api/quickstart/nodejs#step_1_turn_on_the)
+   1. Turn on the Google Sheets API by following [this Step 1](https://developers.google.com/sheets/api/quickstart/nodejs#step_1_turn_on_the). You can use the default for all settings.
    1. Then download `credentials.json` into the cloned directory.
 1. Create `cocjwt.txt`
    1. Generate token from [Clash of Clans API](https://developer.clashofclans.com/#/getting-started)
@@ -33,7 +33,7 @@ This generates the stats for Clan War Leagues on Google spreadsheet.
       ```
       $ npx ts-node src/main.ts
       ```
-      and follow [Step 4's instruction a)-c)](https://developers.google.com/sheets/api/quickstart/nodejs#step_4_run_the_sample)
+      and follow [Step 4's instruction a)-c)](https://developers.google.com/sheets/api/quickstart/nodejs#step_4_run_the_sample).
 
 ### Usage
 

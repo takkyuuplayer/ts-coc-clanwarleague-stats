@@ -82,10 +82,18 @@ function getNewToken(oAuth2Client: any, callback: typeof listMajors) {
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
  */
 async function listMajors(auth: any) {
+  const spreadsheet = await generateSpreadsheet(auth, "#29UQ0802V");
+  console.log(spreadsheet.data.spreadsheetUrl);
+}
+
+async function generateSpreadsheet(
+  auth: any,
+  clanTag: string,
+  spreadsheetId?: string
+) {
   const client = await util
     .promisify(fs.readFile)("coc.json")
     .then((content) => new Coc(JSON.parse(content.toString()).jwt));
-  const clanTag = "#29UQ0802V";
 
   const leaguegroup = await client
     .fetchCurrentWarLeague(clanTag)
@@ -95,12 +103,11 @@ async function listMajors(auth: any) {
   //     .then(content => JSON.parse(content.toString()))
 
   const sheets = google.sheets({ version: "v4", auth });
-  const spreadsheet = await sheets.spreadsheets.create({
-    requestBody: Coc.createSpreadsheetRequestBody(clanTag, leaguegroup),
-  });
-  // const spreadsheet = await sheets.spreadsheets.get({
-  //     spreadsheetId: '1P7LOxalE1oA7Qw8GbG6oC5AcryIFXgPDMkaQOVzsC7I',
-  // })
+  const spreadsheet = spreadsheetId
+    ? await sheets.spreadsheets.get({ spreadsheetId: spreadsheetId! })
+    : await sheets.spreadsheets.create({
+        requestBody: Coc.createSpreadsheetRequestBody(clanTag, leaguegroup),
+      });
 
   // Initialize sheets
   await sheets.spreadsheets.values.batchUpdate({
@@ -153,5 +160,5 @@ async function listMajors(auth: any) {
     requestBody: Coc.resizeColumnRequestBody(spreadsheet),
   });
 
-  console.log(spreadsheet.data.spreadsheetUrl);
+  return spreadsheet;
 }

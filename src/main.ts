@@ -83,33 +83,33 @@ async function listMajors(auth: any) {
     const client = await util.promisify(fs.readFile)('coc.json')
         .then(content => new Coc(JSON.parse(content.toString()).jwt))
     const clanTag = '#29UQ0802V'
-    // const leaguegroup = await client.fetchCurrentWarLeague(clanTag)
-    //     .then(response => response.data)
-    //     .catch(console.log);
-    const leaguegroup = await util.promisify(fs.readFile)('test/data/coc-currenwar-leaguegroup.json')
-        .then(content => JSON.parse(content.toString()))
+    const leaguegroup = await client.fetchCurrentWarLeague(clanTag)
+        .then(response => response.data)
+        .catch(console.log);
+    // const leaguegroup = await util.promisify(fs.readFile)('test/data/coc-currenwar-leaguegroup.json')
+    //     .then(content => JSON.parse(content.toString()))
     const clan = leaguegroup.clans.find((c: any) => c.tag === clanTag)
 
     const sheets = google.sheets({ version: 'v4', auth });
-    // const spreadsheet = await sheets.spreadsheets.create({
-    //     requestBody: {
-    //         properties: {
-    //             title: `${clan.name} (${clan.tag}) / ${leaguegroup.season}`,
-    //         },
-    //         sheets: [
-    //             {
-    //                 properties: {
-    //                     title: "Summary",
-    //                 },
-    //             },
-    //             ...leaguegroup.clans.map((c: any) => ({ properties: { title: c.name } }))
-    //         ]
-    //     }
-    // })
-    const spreadsheet = await sheets.spreadsheets.get({
-        spreadsheetId: '1Ah-LAZLH-IS1Xazs2wYhgLxTGW94Olu7Loq53gU9ACU'
+    const spreadsheet = await sheets.spreadsheets.create({
+        requestBody: {
+            properties: {
+                title: `${clan.name} (${clan.tag}) / ${leaguegroup.season}`,
+            },
+            sheets: [
+                {
+                    properties: {
+                        title: "Summary",
+                    },
+                },
+                ...leaguegroup.clans.map((c: any) => ({ properties: { title: c.name } }))
+            ]
+        }
     })
-    // console.log(spreadsheet)
+    // const spreadsheet = await sheets.spreadsheets.get({
+    //     spreadsheetId: '1Ah-LAZLH-IS1Xazs2wYhgLxTGW94Olu7Loq53gU9ACU'
+    // })
+    console.log(spreadsheet)
 
     // Update Summary Sheets
     await sheets.spreadsheets.values.batchUpdate({

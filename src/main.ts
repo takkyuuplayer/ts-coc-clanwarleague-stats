@@ -82,8 +82,14 @@ function getNewToken(oAuth2Client: any, callback: typeof listMajors) {
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
  */
 async function listMajors(auth: any) {
-  const spreadsheet = await generateSpreadsheet(auth, "#29UQ0802V");
-  console.log(spreadsheet.data.spreadsheetUrl);
+  if (process.argv.length === 3) {
+    const spreadsheet = await generateSpreadsheet(auth, process.argv[2]);
+    console.log(spreadsheet.data.spreadsheetUrl);
+  } else {
+    console.log("You're ready to use");
+    console.log("Usage:");
+    console.log('    npx ts-node src/main.ts "#ClanTag"');
+  }
 }
 
 async function generateSpreadsheet(
@@ -92,8 +98,8 @@ async function generateSpreadsheet(
   spreadsheetId?: string
 ) {
   const client = await util
-    .promisify(fs.readFile)("coc.json")
-    .then((content) => new Coc(JSON.parse(content.toString()).jwt));
+    .promisify(fs.readFile)("cocjwt.txt")
+    .then((content) => new Coc(content.toString().trim()));
 
   const leaguegroup = await client
     .fetchCurrentWarLeague(clanTag)

@@ -1,35 +1,45 @@
-![](https://github.com/takkyuuplayer/ts-template/workflows/CI/badge.svg)
+![](https://github.com/takkyuuplayer/ts-coc-clanwarleague-stats/workflows/CI/badge.svg)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-# ts-template
 
-Server-side TypeScript template repository
+# ts-coc-clanwarleague-stats
 
-## How to generate
+This generates the stats for Clan War Leagues on Google spreadsheet.
 
-1. TypeScript Environment
-   ```
-   $ npm i -D typescript ts-node @types/node
-   ```
-2. Test Environment by Jest
-   ```
-   $ npm i -D jest @types/jest ts-jest
-   $ npx ts-jest config:init
-   ```
-3. ESLint
+## How to Use
 
-   ```
-   $ npm i -D eslint
-   $ npx eslint --init
-   ? How would you like to use ESLint? To check syntax and find problems
-   ? What type of modules does your project use? JavaScript modules (import/export)
-   ? Which framework does your project use? None of these
-   ? Does your project use TypeScript? Yes
-   ? Where does your code run? Browser
-   ? What format do you want your config file to be in? JavaScript
-   The config that you've selected requires the following dependencies:
+### Initial setup
 
-   @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest
-   ? Would you like to install them now with npm? Yes
+1. Clone the repository and run npm install
    ```
+   $ git clone git@github.com:takkyuuplayer/ts-coc-clanwarleague-stats.git
+   $ cd ts-coc-clanwarleague-stats
+   $ npm install
+   ```
+1. Create `credentials.json`
+   1. [Turn on the Google Sheets API by following this Step 1](https://developers.google.com/sheets/api/quickstart/nodejs#step_1_turn_on_the)
+   1. Then download `credentials.json` into the cloned directory.
+1. Create `coc.jwt`
+   1. Generate token from [Clash of Clans API](https://developer.clashofclans.com/#/getting-started)
+      * Specify your IPv4 address in the ALLOWED IP ADDRESSES when creating the API token
+         ```
+         $ curl 'https://api.ipify.org'
+         1.2.3.4
+         ```
+         ![CoC API token](./docs/coc.png | width=200)
+    2. Save the generated token as `coc.jwt`
+         ![CoC API token](./docs/coc2.png | width=200)
+1. Create `token.json`
+   1. Run
+      ```
+      $ npx ts-node src/main.ts
+      ```
+      and follow [Step 4's instruction a)-c)](https://developers.google.com/sheets/api/quickstart/nodejs#step_4_run_the_sample)
 
-4. Prettier: [prettier/eslint\-plugin\-prettier: ESLint plugin for Prettier formatting](https://github.com/prettier/eslint-plugin-prettier#installation)
+### Usage
+
+You can open the spreadsheet URL that will be shown
+
+```
+$ npx ts-node src/main.ts "#ClanTag"
+https://docs.google.com/spreadsheets/d/{spreadsheetId}/edit
+```

@@ -3,7 +3,7 @@ import util from "util";
 import readline from "readline";
 import { google, sheets_v4 } from "googleapis";
 
-import { Coc } from "./webServices/coc";
+import { Coc } from "./coc";
 
 // If modifying these scopes, delete token.json.
 const SCOPES = ["https://www.googleapis.com/auth/spreadsheets"];

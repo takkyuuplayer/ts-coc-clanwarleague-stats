@@ -12,8 +12,6 @@ const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
 // time.
 const TOKEN_PATH = 'token.json';
 
-const MAX_TH_LEVEL = 13;
-
 // Load client secrets from a local file.
 fs.readFile('credentials.json', (err, content) => {
     if (err) return console.log('Error loading client secret file:', err);
@@ -81,11 +79,11 @@ async function listMajors(auth: any) {
         .then(content => new Coc(JSON.parse(content.toString()).jwt))
     const clanTag = '#29UQ0802V'
 
-    // const leaguegroup = await client.fetchCurrentWarLeague(clanTag)
-    //     .then(response => response.data)
-    //     .catch(console.log);
-    const leaguegroup = await util.promisify(fs.readFile)('test/data/coc-currenwar-leaguegroup.json')
-        .then(content => JSON.parse(content.toString()))
+    const leaguegroup = await client.fetchCurrentWarLeague(clanTag)
+        .then(response => response.data)
+        .catch(console.log);
+    // const leaguegroup = await util.promisify(fs.readFile)('test/data/coc-currenwar-leaguegroup.json')
+    //     .then(content => JSON.parse(content.toString()))
 
     const sheets = google.sheets({ version: 'v4', auth });
     const spreadsheet = await sheets.spreadsheets.create({
@@ -136,43 +134,8 @@ async function listMajors(auth: any) {
     // Resize Columns
     await sheets.spreadsheets.batchUpdate({
         spreadsheetId: spreadsheet.data.spreadsheetId,
-        requestBody: {
-            requests: [
-                ...spreadsheet.data.sheets!.map((sheet) => ({
-                    autoResizeDimensions: {
-                        dimensions: {
-                            sheetId: sheet.properties!.sheetId,
-                            dimension: "COLUMNS",
-                            startIndex: 0,
-                            endIndex: 26,
-                        }
-                    }
-                })),
-            ]
-        }
+        requestBody: Coc.resizeColumnRequestBody(spreadsheet),
     })
 
     console.log(spreadsheet.data.spreadsheetUrl)
-
-    // Add Each Clan Sheets
-    // const addSheetRequests: Array<sheets_v4.Schema$Request> = leaguegroup.clans.filter((c: any) => {
-    //     return spreadsheet.data.sheets?.find(sheet => sheet.properties?.title === c.name) === undefined
-    // }).map((c: any) => {
-    //     return {
-    //         addSheet: {
-    //             properties: {
-    //                 title: `${c.name}`
-    //             }
-    //         }
-    //     }
-    // })
-    // if (addSheetRequests.length) {
-    //     const addedSheets = await sheets.spreadsheets.batchUpdate({
-    //         spreadsheetId: spreadsheet.data.spreadsheetId,
-    //         requestBody: {
-    //             requests: addSheetRequests
-    //         }
-    //     })
-    //     console.log(addedSheets)
-    // }
 }

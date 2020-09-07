@@ -1,6 +1,7 @@
-import axios, { AxiosAdapter, AxiosInstance, AxiosPromise } from 'axios'
+import axios, { AxiosInstance, AxiosPromise } from 'axios'
 import qs from 'querystring'
 import { sheets_v4 } from 'googleapis'
+import { GaxiosResponse } from 'gaxios';
 
 const MAX_TH_LEVEL = 13;
 
@@ -159,5 +160,23 @@ export class Coc {
                 }
             }),
         ];
+    }
+
+    public static resizeColumnRequestBody(spreadsheet: GaxiosResponse<sheets_v4.Schema$Spreadsheet>) {
+        return {
+            requests: [
+                ...spreadsheet.data.sheets!.map((sheet) => ({
+                    autoResizeDimensions: {
+                        dimensions: {
+                            sheetId: sheet.properties!.sheetId,
+                            dimension: "COLUMNS",
+                            startIndex: 0,
+                            endIndex: 26,
+                        }
+                    }
+                })),
+            ]
+        }
+
     }
 }

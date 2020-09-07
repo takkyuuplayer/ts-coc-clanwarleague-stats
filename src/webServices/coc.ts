@@ -78,7 +78,7 @@ export class Coc {
         {
           range: `${SUMMARY_SHEET_NAME}!A1:${column}${
             leaguegroup.clans.length + 1
-            }`,
+          }`,
           values: [
             [
               ...SUMMARY_SHEET_HEADER,

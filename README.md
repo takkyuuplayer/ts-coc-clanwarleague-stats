@@ -32,9 +32,9 @@ This generates the stats for Clan War Leagues on Google spreadsheet.
          $ curl 'https://api.ipify.org'
          1.2.3.4
          ```
-         ![CoC API token](./docs/coc.png)
+         <img alt="Generate CoC API token" src="https://github.com/takkyuuplayer/ts-coc-clanwarleague-stats/raw/master/docs/coc.png" width="400">
     2. Save the generated token as `cocjwt.txt`
-         ![CoC API token](./docs/coc2.png)
+         <img alt="Copy CoC API token" src="https://github.com/takkyuuplayer/ts-coc-clanwarleague-stats/raw/master/docs/coc2.png" width="400">
 1. Generate `token.json`
    1. Run
       ```

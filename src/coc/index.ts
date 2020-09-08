@@ -10,6 +10,9 @@ const SUMMARY_SHEET_HEADER = ["Clan Name", "Clan Tag", "Members"];
 
 const CLAN_SHEET_HEADER = ["Player Name", "Player Tag", "TH", "Stars", "Count"];
 
+const NEXT_SHEET_NAME = "Next";
+const NEXT_SHEET_HEADER = ["Player Name", "TH", "Opponent Name", "TH"];
+
 export class Coc {
   private client: AxiosInstance;
 
@@ -46,6 +49,14 @@ export class Coc {
         {
           properties: {
             title: SUMMARY_SHEET_NAME,
+            gridProperties: {
+              frozenRowCount: 1,
+            },
+          },
+        },
+        {
+          properties: {
+            title: NEXT_SHEET_NAME,
             gridProperties: {
               frozenRowCount: 1,
             },
@@ -98,6 +109,18 @@ export class Coc {
               ];
             }),
           ],
+        },
+      ],
+    };
+  }
+
+  public static initializeNextSheetRequestBody(): sheets_v4.Schema$BatchUpdateValuesRequest {
+    return {
+      valueInputOption: "USER_ENTERED",
+      data: [
+        {
+          range: `${NEXT_SHEET_NAME}!A1:D1`,
+          values: [NEXT_SHEET_HEADER],
         },
       ],
     };
@@ -166,6 +189,24 @@ export class Coc {
         };
       }),
     ];
+  }
+
+  public static updateNextSheetDataRequest(
+    clanTag: string,
+    warResult: any
+  ): Array<sheets_v4.Schema$ValueRange> {
+    return ["clan", "opponent"].map((target: string) => {
+      const range =
+        warResult[target].tag === clanTag
+          ? `${NEXT_SHEET_NAME}!A2:B${warResult.teamSize + 1}`
+          : `${NEXT_SHEET_NAME}!C2:D${warResult.teamSize + 1}`;
+      return {
+        range,
+        values: warResult[target].members
+          .sort((a: any, b: any) => a.mapPosition - b.mapPosition)
+          .map((member: any) => [member.name, member.townhallLevel]),
+      };
+    });
   }
 
   public static resizeColumnRequestBody(

@@ -82,7 +82,7 @@ function getNewToken(oAuth2Client: any, callback: typeof listMajors) {
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
  */
 async function listMajors(auth: any) {
-  if (process.argv.length > 3) {
+  if (process.argv.length >= 3) {
     const spreadsheet = await generateSpreadsheet(
       auth,
       process.argv[2],
@@ -133,6 +133,10 @@ async function generateSpreadsheet(
   });
   await sheets.spreadsheets.values.batchUpdate({
     spreadsheetId: spreadsheet.data.spreadsheetId,
+    requestBody: Coc.initializeNextSheetRequestBody(),
+  });
+  await sheets.spreadsheets.values.batchUpdate({
+    spreadsheetId: spreadsheet.data.spreadsheetId,
     requestBody: Coc.initializeClanSheetRequestBody(leaguegroup),
   });
 
@@ -158,9 +162,20 @@ async function generateSpreadsheet(
       })
     );
     warResults.forEach((warResult: any) => {
-      eachWarResultRequests.push(
-        ...Coc.updateWarResultDataRequest(members, idx + 1, warResult)
-      );
+      if (warResult.state !== "preparation") {
+        eachWarResultRequests.push(
+          ...Coc.updateWarResultDataRequest(members, idx + 1, warResult)
+        );
+        return;
+      }
+      if (
+        warResult.clan.tag === clanTag ||
+        warResult.opponent.tag === clanTag
+      ) {
+        eachWarResultRequests.push(
+          ...Coc.updateNextSheetDataRequest(clanTag, warResult)
+        );
+      }
     });
   }
   await sheets.spreadsheets.values.batchUpdate({

@@ -3,6 +3,7 @@
 
 ![](https://github.com/takkyuuplayer/ts-coc-clanwarleague-stats/workflows/CI/badge.svg)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
 This generates the stats for Clan War Leagues on Google spreadsheet.
 

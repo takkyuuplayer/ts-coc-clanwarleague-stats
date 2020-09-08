@@ -1,0 +1,458 @@
+{
+  "state": "preparation",
+  "teamSize": 30,
+  "preparationStartTime": "20200905T144129.000Z",
+  "startTime": "20200906T143950.000Z",
+  "endTime": "20200907T143950.000Z",
+  "clan": {
+    "tag": "#29UQ0802V",
+    "name": "終わりなき旅",
+    "badgeUrls": {
+      "small": "https://api-assets.clashofclans.com/badges/70/ziaBRYqiBCg42JhgYYcpXQ5Q875_-oJa2sqgl1pTiek.png",
+      "large": "https://api-assets.clashofclans.com/badges/512/ziaBRYqiBCg42JhgYYcpXQ5Q875_-oJa2sqgl1pTiek.png",
+      "medium": "https://api-assets.clashofclans.com/badges/200/ziaBRYqiBCg42JhgYYcpXQ5Q875_-oJa2sqgl1pTiek.png"
+    },
+    "clanLevel": 12,
+    "attacks": 0,
+    "stars": 0,
+    "destructionPercentage": 0,
+    "members": [
+      {
+        "tag": "#CRGVQYJG",
+        "name": "masa MK.Ⅱ",
+        "townhallLevel": 13,
+        "mapPosition": 12,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#UC29C2RQ",
+        "name": "クフレ",
+        "townhallLevel": 13,
+        "mapPosition": 9,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#P2CUYG2QU",
+        "name": "そら",
+        "townhallLevel": 13,
+        "mapPosition": 40,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#PGRG0UGG",
+        "name": "takezoh",
+        "townhallLevel": 13,
+        "mapPosition": 1,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#G2RCVLY9",
+        "name": "らいと",
+        "townhallLevel": 13,
+        "mapPosition": 2,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#JJ8QL0V",
+        "name": "MIKASA",
+        "townhallLevel": 13,
+        "mapPosition": 3,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#2G0CG9UJR",
+        "name": "BOSS",
+        "townhallLevel": 12,
+        "mapPosition": 43,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#P0L0PGQ9R",
+        "name": "スーパードライ",
+        "townhallLevel": 13,
+        "mapPosition": 39,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#J9UV22J",
+        "name": "DAIKI",
+        "townhallLevel": 12,
+        "mapPosition": 42,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#PV8QV9Y8U",
+        "name": "えいたまん",
+        "townhallLevel": 13,
+        "mapPosition": 33,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#L920YR9PG",
+        "name": "おか吉",
+        "townhallLevel": 13,
+        "mapPosition": 19,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8CJ89JY8U",
+        "name": "未婚のparty❤",
+        "townhallLevel": 13,
+        "mapPosition": 36,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#J8VJY00Y",
+        "name": "ディグマル",
+        "townhallLevel": 13,
+        "mapPosition": 10,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#LLLC8VYP",
+        "name": "あきらchan",
+        "townhallLevel": 13,
+        "mapPosition": 29,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#YRR99P82",
+        "name": "ぽん♡ぽん",
+        "townhallLevel": 13,
+        "mapPosition": 4,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#GUQ8L820",
+        "name": "シャーク帝国",
+        "townhallLevel": 13,
+        "mapPosition": 5,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#2JYPCRU2P",
+        "name": "れいな♡秘書",
+        "townhallLevel": 13,
+        "mapPosition": 27,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#VPL290J",
+        "name": "たつき",
+        "townhallLevel": 13,
+        "mapPosition": 7,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#UCLLGLGL",
+        "name": "ジョニー",
+        "townhallLevel": 13,
+        "mapPosition": 31,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#2G0U9209",
+        "name": "COMACOTA",
+        "townhallLevel": 13,
+        "mapPosition": 6,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#2R2UJR22Q",
+        "name": "しんのすけ",
+        "townhallLevel": 13,
+        "mapPosition": 13,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8P02LQR0L",
+        "name": "田中のお兄さん",
+        "townhallLevel": 12,
+        "mapPosition": 41,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#Y2JPGP0LY",
+        "name": "✪孔明✪history",
+        "townhallLevel": 13,
+        "mapPosition": 28,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#LVGUUVCU",
+        "name": "ギニュー隊長",
+        "townhallLevel": 13,
+        "mapPosition": 32,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QGR89PRP",
+        "name": "たまちゃん",
+        "townhallLevel": 13,
+        "mapPosition": 26,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#829G0G8VL",
+        "name": "フライト",
+        "townhallLevel": 13,
+        "mapPosition": 30,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#90JVU8VPJ",
+        "name": "さる",
+        "townhallLevel": 13,
+        "mapPosition": 23,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8PGYC8UCP",
+        "name": "サマナー",
+        "townhallLevel": 13,
+        "mapPosition": 24,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8Q8ULYLPG",
+        "name": "とびー",
+        "townhallLevel": 13,
+        "mapPosition": 37,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8L8LV22PV",
+        "name": "himi",
+        "townhallLevel": 13,
+        "mapPosition": 35,
+        "opponentAttacks": 0
+      }
+    ]
+  },
+  "opponent": {
+    "tag": "#9RV0R0VJ",
+    "name": "广州最强部",
+    "badgeUrls": {
+      "small": "https://api-assets.clashofclans.com/badges/70/EInom1PeG0l4_gS3EOgnnGHD7WQdYZi8bg05F-F_taY.png",
+      "large": "https://api-assets.clashofclans.com/badges/512/EInom1PeG0l4_gS3EOgnnGHD7WQdYZi8bg05F-F_taY.png",
+      "medium": "https://api-assets.clashofclans.com/badges/200/EInom1PeG0l4_gS3EOgnnGHD7WQdYZi8bg05F-F_taY.png"
+    },
+    "clanLevel": 19,
+    "attacks": 0,
+    "stars": 0,
+    "destructionPercentage": 0,
+    "members": [
+      {
+        "tag": "#RJ9PQV99",
+        "name": "老火肥汤",
+        "townhallLevel": 12,
+        "mapPosition": 40,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#YYGR2R88",
+        "name": "【ACE】白河愁",
+        "townhallLevel": 12,
+        "mapPosition": 35,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#LPJC0GGC",
+        "name": "jr-onon",
+        "townhallLevel": 13,
+        "mapPosition": 3,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8P00JLPU",
+        "name": "[ACE]*石头的古堡*",
+        "townhallLevel": 13,
+        "mapPosition": 24,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#2RYJ29YL",
+        "name": "[Ace] KonG",
+        "townhallLevel": 13,
+        "mapPosition": 1,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#Y982PJ8P0",
+        "name": "辉辉Love",
+        "townhallLevel": 13,
+        "mapPosition": 6,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8C0GJGP8L",
+        "name": "杨洪",
+        "townhallLevel": 13,
+        "mapPosition": 7,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8PYJRGGCJ",
+        "name": "狼人村",
+        "townhallLevel": 13,
+        "mapPosition": 2,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8LGGCG0CJ",
+        "name": "无形的裝bi",
+        "townhallLevel": 13,
+        "mapPosition": 12,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#P8C88U22P",
+        "name": "离殇、荒谬",
+        "townhallLevel": 13,
+        "mapPosition": 14,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#VLUQJLLC",
+        "name": "内涵情调.米",
+        "townhallLevel": 13,
+        "mapPosition": 22,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#9QU0LLG2",
+        "name": "风云",
+        "townhallLevel": 13,
+        "mapPosition": 15,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8JCUYC880",
+        "name": "战旗图图",
+        "townhallLevel": 13,
+        "mapPosition": 20,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#YVJG2PL2",
+        "name": "豪少联盟",
+        "townhallLevel": 12,
+        "mapPosition": 34,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#PJQCR2RJQ",
+        "name": "我霸气登场",
+        "townhallLevel": 13,
+        "mapPosition": 19,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#2P88YL2R0",
+        "name": "斌笑爷",
+        "townhallLevel": 13,
+        "mapPosition": 13,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#820UG9GLV",
+        "name": "friendships",
+        "townhallLevel": 13,
+        "mapPosition": 33,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#88VQVUU90",
+        "name": "族魂@战",
+        "townhallLevel": 13,
+        "mapPosition": 5,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QLCU9PJG",
+        "name": "♠️♥️♣️♦️",
+        "townhallLevel": 12,
+        "mapPosition": 36,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#P8R0YL0L2",
+        "name": "Brry",
+        "townhallLevel": 13,
+        "mapPosition": 16,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#PQPYUUY8Q",
+        "name": "嗨ぁ啼鸣",
+        "townhallLevel": 13,
+        "mapPosition": 8,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#9UGCC2JRU",
+        "name": "汽车培训13829613991",
+        "townhallLevel": 13,
+        "mapPosition": 17,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#9JGLPLC0L",
+        "name": "wby",
+        "townhallLevel": 13,
+        "mapPosition": 27,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#PCLULGVUQ",
+        "name": "白晨曦",
+        "townhallLevel": 13,
+        "mapPosition": 11,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#28QLC2CGG",
+        "name": "兴岗『彬哥』",
+        "townhallLevel": 13,
+        "mapPosition": 18,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#9YR9VJR0",
+        "name": "凌驾一",
+        "townhallLevel": 13,
+        "mapPosition": 4,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#2V8QGQL20",
+        "name": "brusguu",
+        "townhallLevel": 13,
+        "mapPosition": 31,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#9P0CRVGUL",
+        "name": "天下无敌",
+        "townhallLevel": 13,
+        "mapPosition": 9,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#UGPRYQL9",
+        "name": "喜欢天黑却怕鬼",
+        "townhallLevel": 13,
+        "mapPosition": 10,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#PLUQGJVJV",
+        "name": "墨渊战神",
+        "townhallLevel": 13,
+        "mapPosition": 41,
+        "opponentAttacks": 0
+      }
+    ]
+  },
+  "warStartTime": "20200906T143950.000Z"
+}

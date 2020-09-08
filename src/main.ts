@@ -82,9 +82,18 @@ function getNewToken(oAuth2Client: any, callback: typeof listMajors) {
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
  */
 async function listMajors(auth: any) {
-  if (process.argv.length === 3) {
-    const spreadsheet = await generateSpreadsheet(auth, process.argv[2]);
-    console.log(spreadsheet.data.spreadsheetUrl);
+  if (process.argv.length > 3) {
+    const spreadsheet = await generateSpreadsheet(
+      auth,
+      process.argv[2],
+      process.argv[3] || undefined
+    );
+    console.log(`========================================
+Open ${spreadsheet.data.spreadsheetUrl}
+
+To update data, run
+  npx ts-node src/main.ts "${process.argv[2]}" "${spreadsheet.data.spreadsheetId}"
+========================================`);
   } else {
     console.log(`========================================
 Conglaturation! You're ready to use.

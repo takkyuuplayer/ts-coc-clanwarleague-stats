@@ -1,7 +1,8 @@
-![](https://github.com/takkyuuplayer/ts-coc-clanwarleague-stats/workflows/CI/badge.svg)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 # ts-coc-clanwarleague-stats
+
+![](https://github.com/takkyuuplayer/ts-coc-clanwarleague-stats/workflows/CI/badge.svg)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 This generates the stats for Clan War Leagues on Google spreadsheet.
 
@@ -37,9 +38,14 @@ This generates the stats for Clan War Leagues on Google spreadsheet.
 
 ### Usage
 
-You can open the spreadsheet URL that will be shown
+#### Create a new spreadsheet
 
 ```
 $ npx ts-node src/main.ts "#ClanTag"
-https://docs.google.com/spreadsheets/d/{spreadsheetId}/edit
+```
+
+#### Update an existing spreadsheet
+
+```
+$ npx ts-node src/main.ts "#ClanTag" "SpreadsheetId"
 ```

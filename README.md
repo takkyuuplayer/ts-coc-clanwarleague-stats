@@ -6,6 +6,12 @@
 
 This generates the stats for Clan War Leagues on Google spreadsheet.
 
+[War Leagues Stats Example \- Google Sheets](https://docs.google.com/spreadsheets/d/1B2E9cuSI4uLWhXlxcq6sp8iQPXF1pt9DLtmh5WHQO6s/edit#gid=1805068306)
+
+* The Summary sheet shows how many players are in clans grouped by townhall level.
+* The Next sheet shows players in the next round, even it is still on preparation period, as of the time the sheet updated.
+* Each clan sheets shows all players with stars acquired in each periods. ? is shown when players have not attacked yet.
+
 ## How to Use
 
 ### Initial setup

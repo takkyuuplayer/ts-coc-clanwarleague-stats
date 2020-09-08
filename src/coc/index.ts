@@ -195,18 +195,30 @@ export class Coc {
     clanTag: string,
     warResult: any
   ): Array<sheets_v4.Schema$ValueRange> {
-    return ["clan", "opponent"].map((target: string) => {
-      const range =
-        warResult[target].tag === clanTag
-          ? `${NEXT_SHEET_NAME}!A2:B${warResult.teamSize + 1}`
-          : `${NEXT_SHEET_NAME}!C2:D${warResult.teamSize + 1}`;
-      return {
-        range,
-        values: warResult[target].members
-          .sort((a: any, b: any) => a.mapPosition - b.mapPosition)
-          .map((member: any) => [member.name, member.townhallLevel]),
-      };
-    });
+    return [
+      ...["clan", "opponent"].map((target: string) => {
+        const range =
+          warResult[target].tag === clanTag
+            ? `${NEXT_SHEET_NAME}!A1:A1`
+            : `${NEXT_SHEET_NAME}!C1:C1`;
+        return {
+          range,
+          values: [[warResult[target].name]],
+        };
+      }),
+      ...["clan", "opponent"].map((target: string) => {
+        const range =
+          warResult[target].tag === clanTag
+            ? `${NEXT_SHEET_NAME}!A2:B${warResult.teamSize + 1}`
+            : `${NEXT_SHEET_NAME}!C2:D${warResult.teamSize + 1}`;
+        return {
+          range,
+          values: warResult[target].members
+            .sort((a: any, b: any) => a.mapPosition - b.mapPosition)
+            .map((member: any) => [member.name, member.townhallLevel]),
+        };
+      }),
+    ];
   }
 
   public static resizeColumnRequestBody(

@@ -34,7 +34,8 @@ This generates the stats for Clan War Leagues on Google spreadsheet.
          ```
          <img alt="Generate CoC API token" src="https://github.com/takkyuuplayer/ts-coc-clanwarleague-stats/raw/master/docs/coc.png" width="400">
     2. Save the generated token as `cocjwt.txt`
-         <img alt="Copy CoC API token" src="https://github.com/takkyuuplayer/ts-coc-clanwarleague-stats/raw/master/docs/coc2.png" width="400">
+
+      <img alt="Copy CoC API token" src="https://github.com/takkyuuplayer/ts-coc-clanwarleague-stats/raw/master/docs/coc2.png" width="400">
 1. Generate `token.json`
    1. Run
       ```

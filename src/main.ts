@@ -162,15 +162,12 @@ async function generateSpreadsheet(
       })
     );
     warResults.forEach((warResult: any) => {
-      if (warResult.state !== "preparation") {
-        eachWarResultRequests.push(
-          ...Coc.updateWarResultDataRequest(members, idx + 1, warResult)
-        );
-        return;
-      }
+      eachWarResultRequests.push(
+        ...Coc.updateWarResultDataRequest(members, idx + 1, warResult)
+      );
       if (
-        warResult.clan.tag === clanTag ||
-        warResult.opponent.tag === clanTag
+        warResult.state == "preparation" &&
+        (warResult.clan.tag === clanTag || warResult.opponent.tag === clanTag)
       ) {
         eachWarResultRequests.push(
           ...Coc.updateNextSheetDataRequest(clanTag, warResult)
